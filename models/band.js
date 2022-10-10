@@ -19,26 +19,26 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement:true    
     },
-    name: {
+    band_name: {
         type:DataTypes.STRING,
         allowNull:false
     },
-    genre:{
+    band_genre:{
         type:DataTypes.TEXT,
         allowNull:false
     },
-    available_start_time: {
+    band_start_time: {
         type: DataTypes.DATE,
         allowNull:false
     },
-    end_time:{
+    band_end_time:{
         type:DataTypes.DATE,
         allowNull:false
     }
   }, {
     sequelize,
     modelName: 'Band',
-    tableName: 'bands'
+    tableName: 'bands',
     timestamps: false
   });
   return Band;

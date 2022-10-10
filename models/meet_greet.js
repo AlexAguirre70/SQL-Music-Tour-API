@@ -33,7 +33,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false}
   }, {
     sequelize,
-    modelName: 'meet_greet',
+    modelName: 'Meet_greet',
+    tableName: 'meet_greet',
     timestamps:false
   });
   return Meet_greet;

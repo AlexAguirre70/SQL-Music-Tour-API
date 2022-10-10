@@ -9,19 +9,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      band_name: {
         type: Sequelize.STRING,
         allowNull:false
       },
-      genre: {
+      band_genre: {
         type: Sequelize.TEXT,
         allowNull:false
       },
-      available_start_time: {
+      band_start_time: {
         type: Sequelize.DATE,
         allowNull:false
       },
-      end_time: {
+      band_end_time: {
         type: Sequelize.DATE,
         allowNull:false
       }

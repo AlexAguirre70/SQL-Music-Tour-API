@@ -30,9 +30,12 @@ module.exports = (sequelize, DataTypes) => {
     event_end_time:{
       type:DataTypes.DATE,
       allowNull:false
-  }, {
+  }
+},
+  {
     sequelize,
-    modelName: 'event',
+    modelName: 'Event',
+    tableName: 'events',
     timestamps:false
   });
   return Event;

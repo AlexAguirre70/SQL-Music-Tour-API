@@ -53,7 +53,7 @@ bands.put('./:id',async(req,res)=>{
 // Delete a band
 bands.delete ('./', async (req,res)=>{
     try {
-        const deleteBands = await. Band.destroy({
+        const deleteBands = await Band.destroy({
             where: {band_id:req.params.id}
         })
         res.status(200).json({

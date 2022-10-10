@@ -34,7 +34,33 @@ bands.post('/', async(req,res)=>{
             data: newBand
         })
     } catch (error){
-        res.status(500).jdon(err)
+        res.status(500).json(err)
+    }
+})
+//Update a Band
+bands.put('./:id',async(req,res)=>{
+    try {
+        const updatedBands= await Band.update(req.body, 
+            {where: {band_id: req.params.id}})
+        res.status(200).json({
+            message: `Successfully Updated ${updatedBands} band(s)`
+            })    
+    } catch (error) {
+            res.stau(500).json(err)
+    }
+})
+
+// Delete a band
+bands.delete ('./', async (req,res)=>{
+    try {
+        const deleteBands = await. Band.destroy({
+            where: {band_id:req.params.id}
+        })
+        res.status(200).json({
+            message: `Successfule Deleted the bands ${deleteBands}`
+        })
+    } catch (error) {
+        res.status(500).json(err)
     }
 })
 //Export

@@ -19,11 +19,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "set_time_event_id",
         as: "event"
       })
-      Set_time.belongsTo(Stage,{
-        foreignKey: "set_time_stage_id",
-        as: "stage"
-
-      })
   } }
  
   Set_time.init({
